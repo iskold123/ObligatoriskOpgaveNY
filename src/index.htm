@@ -15,12 +15,15 @@
   <title>Hello app</title>
 </head>
 
-<body>
-  <h1>Hello</h1>
+<body style="background-color: hotpink;">
+  <h1>String manipulation</h1>
   <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <input v-model="input" placeholder="skriv en tekst">
+
+    <button v-on:click="stringToUpper()" class="btn btn-success">Omdan til Stort</button>
+    <button v-on:click="stringToLower()" class="btn btn-primary">Omdan til Småt</button>
+    
+    <div style="font-family: Cavolini; font-size: 150px;">{{ output }}</div>
   </div>
 
   <script src="bundle.js"></script>
